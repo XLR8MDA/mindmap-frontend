@@ -37,7 +37,7 @@ export default function MarkmapHooks({ markdown }: MarkmapHooksProps) {
 
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/generate-mindmap", {
+      const response = await fetch("https://mindmap-backend-production-2025.up.railway.app/generate-mindmap", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: userInput }),
